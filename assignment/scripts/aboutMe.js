@@ -75,6 +75,10 @@ pets = allowedPets;
 console.log(pets);
 checkPets();
 
+pets ++;
+console.log(pets);
+checkPets();
+
 // STRETCH GOALS:
 
 // 16 - Make a variable called `mostPets` and a conditional that
@@ -82,6 +86,28 @@ checkPets();
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
+
+//Create a mostPets variable for the function below
+let mostPets = 0;
+
+//Create a function called morePets that takes two inputs
+function morePets (pets,friendsPets) {
+if (pets > friendsPets) {
+    mostPets = pets; }
+    else if (pets === friendsPets) {
+        //just choose first variable if numbers are the same
+            mostPets = pets;
+        //log the 'same amount' message as a confirmation
+            console.log("We both have the same amount of pets!"); }
+    else if (pets < friendsPets) {
+        mostPets = friendsPets;
+        } console.log (mostPets);
+    }
+
+//Test all 3 cases
+morePets(100,3);
+morePets(5,5);
+morePets(1,2);
 
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
