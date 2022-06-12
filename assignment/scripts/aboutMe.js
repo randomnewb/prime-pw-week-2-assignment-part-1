@@ -159,4 +159,6 @@ luckyMsgMaker(luckyNumber);
 // if it's not true, console log "How about we stay home?"
 let adventurousMessage = "";
 adventurousMessage = (adventurous) ? "Adventures are great!" : "How about we stay home?";
+
+//log the proper message
 console.log(adventurousMessage);
