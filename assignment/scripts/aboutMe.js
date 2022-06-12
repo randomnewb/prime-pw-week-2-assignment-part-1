@@ -2,7 +2,7 @@
 // 1 - Create a variable called `firstName` and assign it the value of your first name
 let firstName = "Tu";
 // 2 - Create a second variable called `lastName` and assign it the value of your last name
-let lastName = 'Nguyen'
+let lastName = "Nguyen";
 // 3 - Create a third variable called `fullName`, assign it the value of your first and last name
 // (remember, you already have variables for this, can you use those?)
 let fullName = firstName + " " + lastName;
@@ -69,7 +69,7 @@ if (pets < allowedPets) {
     }
 }
 console.log(pets);
-console.log(allowedPets);
+checkPets();
 
 pets = allowedPets;
 console.log(pets);
@@ -116,20 +116,47 @@ morePets(1,2);
 //      Otherwise, log "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
 
+//create a variable to hold our message
+let luckyMessage = "";
+
+//create a function that takes one argument, 
+//changes luckyMessage to the appropriate message depending on the case, 
+//and console logs the message
+function luckyMsgMaker (luckyNumber){
 switch(luckyNumber) {
 case 1:
-    console.log("First is the worst");
+    luckyMessage = "First is the worst"; //if our lucky number is 1, set our message variable to the text
     break;
 case 2:
-    console.log("Second is the best");
+    luckyMessage = "Second is the best";
     break;
 case 3:
-    console.log("Third is the one with the polka dot dress");
+    luckyMessage = "Third is the one with the polka dot dress";
     break;
 default:
-    console.log("Luck is what happens when preparation meets opportunity");
-    }  
+    luckyMessage = "Luck is what happens when preparation meets opportunity";
+    }
+    console.log(luckyMessage);
+}
 
+
+//log the appropriate message based on the case
+luckyNumber = 1;
+luckyMsgMaker(luckyNumber);
+
+luckyNumber = 2;
+luckyMsgMaker(luckyNumber);
+
+luckyNumber = 3;
+luckyMsgMaker(luckyNumber);
+
+luckyNumber = 13;
+luckyMsgMaker(luckyNumber);
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 
+// Create a conditional: if adventurous is true, console log "Adventures are great!", 
+// if it's not true, console log "How about we stay home?"
+let adventurousMessage = "";
+adventurousMessage = (adventurous) ? "Adventures are great!" : "How about we stay home?";
+console.log(adventurousMessage);
